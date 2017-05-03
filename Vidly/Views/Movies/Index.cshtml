@@ -34,6 +34,7 @@
 @section scripts{
     <script>
         $(function () {
+
             var table = $("#movies").DataTable({
                 ajax: {
                     url: "/api/movies",
@@ -59,6 +60,17 @@
                     }
                 ]
             });
+
+
+
+
+            //setInterval(function () {
+            //    table.ajax.reload();
+            //    console.log("reload Done");
+            //}, 10000);
+
+
+
             $("#movies").on("click", ".js-delete", function () {
                 var delbutton = $(this);
                 bootbox.confirm("Are You Sure To Remove This Movie?", function (result) {

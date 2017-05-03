@@ -8,6 +8,7 @@ namespace Vidly.Models
 {
     public class Min18YearsIfAMember : ValidationAttribute
     {
+
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             Customer customer = validationContext.ObjectInstance as Customer;
